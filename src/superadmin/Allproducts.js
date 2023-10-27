@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function Allproducts() {
-   const initialProducts = [
+  const initialProducts = [
     {
       id: '001',
       name: 'Product 1',
@@ -43,61 +43,63 @@ function Allproducts() {
   };
 
   return (
-    <div className="container">
-      <h1 className="text-center">Product Information</h1>
-      <div className="mb-3">
-        <div className="row">
-          <div className="col">
+    <div className="bg-fixed bg-center bg-cover h-screen bg-image">
+      <div className="container mx-auto p-5">
+        <h1 className="text-center text-5xl text-black font-serif mt-8 mb-6">Product Information</h1>
+        <div className="mb-8 mt-4">
+          <div className="flex justify-center space-x-4">
             <input
               type="text"
-              className="form-control"
+              className="glassy-input p-2 rounded-full font-serif bg-opacity-50"
               placeholder="Filter by Product Name"
               value={filterProductName}
               onChange={(e) => setFilterProductName(e.target.value)}
             />
-          </div>
-          <div className="col">
             <input
               type="text"
-              className="form-control"
+              className="glassy-input p-2 rounded-full font-serif bg-opacity-50"
               placeholder="Filter by Conversion"
               value={filterConversion}
               onChange={(e) => setFilterConversion(e.target.value)}
             />
-          </div>
-          <div className="col-auto">
-            <button className="btn btn-primary" onClick={handleFilter}>
+            <button className="glassy-button bg-green-800 text-white p-2 rounded-lg" onClick={handleFilter}>
               Filter
             </button>
-          </div>
-          <div className="col-auto">
-            <button className="btn btn-secondary" onClick={handleReset}>
+            <button className="glassy-button bg-green-800 text-white p-2 rounded-lg" onClick={handleReset}>
               Reset
             </button>
           </div>
         </div>
-      </div>
-      <div className="table-responsive">
-        <table className="table table-striped">
-          <thead>
-            <tr>
-              <th>Product ID</th>
-              <th>Product Name</th>
-              <th>Description</th>
-              <th>Conversion (Scoops Left)</th>
-            </tr>
-          </thead>
-          <tbody>
-            {products.map((product, index) => (
-              <tr key={index}>
-                <td>{product.id}</td>
-                <td>{product.name}</td>
-                <td>{product.description}</td>
-                <td>{product.conversion}</td>
+        <div className="table-responsive">
+        <table className="table-auto w-full bg-opacity-50 h-15 bg-gray-100 p-6 h-10 rounded-lg border border-black text-bold font-serif">
+            <thead>
+              <tr>
+                <th className="text-black border">Product ID</th>
+                <th className="text-black border">Product Name</th>
+                <th className="text-black border">Description</th>
+                <th className="text-black border">Conversion (Scoops Left)</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {products.map((product, index) => (
+                <tr key={index} className="text-black border h-10">
+                  <td className="text-black border" style={{ width: '15%' }}>
+                    {product.id}
+                  </td>
+                  <td className="text-black border" style={{ width: '25%' }}>
+                    {product.name}
+                  </td>
+                  <td className="text-black border" style={{ width: '35%' }}>
+                    {product.description}
+                  </td>
+                  <td className="text-black border" style={{ width: '25%' }}>
+                    {product.conversion}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
