@@ -1,0 +1,67 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://cdn.pixabay.com/photo/2018/04/29/21/27/leaf-3361176_640.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    margin-top: 20px; 
+    padding: 20px; 
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    color: black;
+  }
+  
+  table {
+    background: rgba(0, 0, 0, 0.2); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    color: black;
+  }
+  
+  .form-control {
+    background: rgba(0, 0, 0, 0.2); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: black;
+    margin: 5px;
+    padding: 8px;
+  }
+  
+  .btn {
+    background: rgba(0, 0, 0, 0.2); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: black;
+    transition: background-color 0.3s;
+    padding: 8px 12px;
+    margin: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  
+  .btn:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  h1 {
+    color: black;
+  }
+  
+  table th, table td {
+    color: black;
+  }
+  
+  a.btn {
+    color: black;
+  }
+  
